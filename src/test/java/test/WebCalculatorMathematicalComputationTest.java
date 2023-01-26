@@ -440,7 +440,36 @@ public class WebCalculatorMathematicalComputationTest {
         Assert.assertEquals(valueOnDisplay, "684.5");
     }
 
+    @Test
+    public void checkMathMixOne(){
+        String valueOnDisplay = new WebCalculatorHomePagePF(driver)
+                .clickButtonOne()
+                .clickButtonOne()
+                .clickButtonEight()
+                .clickButtonThree()
+                .clickButtonDoubleZero()
+                .clickButtonZero()
+                .clickButtonOne()
+                .clickButtonZero()
+                .clickButtonThree()
+                .clickButtonOne()
+                .clickButtonTwo()
+                .clickButtonDivide()
+                .clickButtonFive()
+                .clickButtonOne()
+                .clickButtonSeven()
+                .clickButtonDivide()
+                .clickButtonThree()
+                .clickButtonFour()
+                .clickButtonDivide()
+                .clickButtonNine()
+                .clickButtonThree()
+                .clickButtonTwo()
+                .clickButtonEqual()
+                .getInfoFromTheDisplay();
 
+        Assert.assertEquals(valueOnDisplay, "684.5");
+    }
 
 
     @AfterMethod(alwaysRun = true)
